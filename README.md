@@ -19,3 +19,5 @@ It is main file of tornado. It rendering "index.html" and call plot method.
 ### plot.py
 It is main file of plotly. It has sample of graph and returns graph as string.
 
+## Sample image
+<img src="https://github.com/haruka0000/WebApp_by_Tornado/blob/master/sample.png" width="900">
