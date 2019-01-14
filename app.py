@@ -6,7 +6,7 @@ import plot
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("index.html", 
-                   graph=plot.graph_01()
+                   graph_01=plot.graph_01()
                   )
 
 def make_app():
