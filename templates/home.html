@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ static_url('style.css') }}" />
+</head>
+<body>
+    <h1> Display Demo </h1>
+    <form action="/home" method="post" accept-charset="UTF-8">
+        {% autoescape None %}
+        <input type="text" name="name" size="40">
+        <br>
+        <input type="text" name="name" size="40">
+        <br>
+        {% for i in range(5) %}
+            {{'<div class="range"><input type="range" min="0" max="10" value="5" class="v_range"><span class="v_range_value">5</span></div>'}}
+        {% end %}
+    </form>
+
+    <!-- スライダーバーの値を表示する JavaScript -->
+    <script>
+        var elem = document.getElementsByClassName('range');
+        var rangeValue = function (elem, target) {
+        　　return function(evt){
+        　　 　　target.innerHTML = elem.value;
+        　　}
+        }
+        for(var i = 0, max = elem.length; i < max; i++){
+        　　bar = elem[i].getElementsByTagName('input')[0];
+        　　target = elem[i].getElementsByTagName('span')[0];
+        　　 bar.addEventListener('input', rangeValue(bar, target));
+        }
+    </script>
+</body>
+</html>

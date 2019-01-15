@@ -1,0 +1,15 @@
+.v_range {
+    height: 200px;
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 20px;
+}
+.range{
+    display: inline-block;
+    padding: 10px;
+}
+.v_range_value{
+    text-align:center;
+    display:block;
+}
+
